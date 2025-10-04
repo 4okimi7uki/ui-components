@@ -11,13 +11,13 @@ const meta: Meta<typeof InputField> = {
         required: false,
     },
     tags: ["autodocs"],
-    // parameters: {
-    //     docs: {
-    //         description: {
-    //             component: "共通で使う入力フィールド。バリデーションやfocus時のアニメーションを持っています。",
-    //         },
-    //     },
-    // },
+    parameters: {
+        docs: {
+            description: {
+                component: "focus時のアニメーションを持っています",
+            },
+        },
+    },
 };
 export default meta;
 
