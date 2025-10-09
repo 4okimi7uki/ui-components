@@ -2,26 +2,36 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "[WEB] Run app",
             "type": "shell",
             "group": "build",
-            "command": "npm run dev",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "detail": "next build",
-            "problemMatcher": [],
-            "label": "[WEB] Run app"
+            "command": "npm run dev",
+            "detail": "next dev",
+            "problemMatcher": []
         },
         {
+            "label": "[StoryBook] Run App",
             "type": "shell",
             "group": "build",
             "command": "npm run storybook",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "detail": "next build",
+            "detail": "storybook dev",
+            "problemMatcher": []
+        },
+        {
+            "label": "ALL: Run App & StoryBook",
+            "type": "shell",
+            "command": "npm run storybook",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
             "problemMatcher": [],
-            "label": "Run StoryBook"
+            "dependsOn": ["[WEB] Run app", "[StoryBook] Run App"]
         }
     ]
 }
